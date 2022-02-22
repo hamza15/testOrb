@@ -1,0 +1,19 @@
+version: 2.1
+
+description: >
+  Sample orb description
+
+
+# If your orb requires other orbs, you can import them like this. Otherwise remove the "orbs" stanza.
+# orbs:
+#  hello: circleci/hello-build@0.0.5
+
+commands:
+ greet:
+     description: Greet someone with a "hello".
+     parameters:
+         to:
+             type: string
+             default: World
+     steps:
+         - run: echo "Hello, << parameters.to >>"
